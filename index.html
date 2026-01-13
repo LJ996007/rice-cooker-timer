@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,38 +8,41 @@
     <meta name="description" content="帮助您计算电饭煲需要设置的定时时长，让您在计划的时间开始煮饭">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="background-effects">
         <div class="floating-circle circle-1"></div>
         <div class="floating-circle circle-2"></div>
         <div class="floating-circle circle-3"></div>
     </div>
-    
+
     <main class="container">
         <header class="header">
             <div class="icon-wrapper">
                 <svg class="rice-cooker-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <ellipse cx="50" cy="75" rx="35" ry="20" fill="url(#gradient1)"/>
-                    <path d="M15 55 Q15 35 50 35 Q85 35 85 55 L85 75 Q85 85 50 85 Q15 85 15 75 Z" fill="url(#gradient2)"/>
-                    <ellipse cx="50" cy="35" rx="35" ry="12" fill="url(#gradient3)"/>
-                    <path d="M35 25 Q50 15 65 25" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none"/>
-                    <circle cx="50" cy="60" r="8" fill="rgba(255,255,255,0.3)"/>
-                    <circle cx="50" cy="60" r="4" fill="#4ade80" class="indicator-light"/>
+                    <ellipse cx="50" cy="75" rx="35" ry="20" fill="url(#gradient1)" />
+                    <path d="M15 55 Q15 35 50 35 Q85 35 85 55 L85 75 Q85 85 50 85 Q15 85 15 75 Z"
+                        fill="url(#gradient2)" />
+                    <ellipse cx="50" cy="35" rx="35" ry="12" fill="url(#gradient3)" />
+                    <path d="M35 25 Q50 15 65 25" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none" />
+                    <circle cx="50" cy="60" r="8" fill="rgba(255,255,255,0.3)" />
+                    <circle cx="50" cy="60" r="4" fill="#4ade80" class="indicator-light" />
                     <defs>
                         <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#374151"/>
-                            <stop offset="100%" stop-color="#1f2937"/>
+                            <stop offset="0%" stop-color="#374151" />
+                            <stop offset="100%" stop-color="#1f2937" />
                         </linearGradient>
                         <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#f8fafc"/>
-                            <stop offset="100%" stop-color="#e2e8f0"/>
+                            <stop offset="0%" stop-color="#f8fafc" />
+                            <stop offset="100%" stop-color="#e2e8f0" />
                         </linearGradient>
                         <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#cbd5e1"/>
-                            <stop offset="100%" stop-color="#94a3b8"/>
+                            <stop offset="0%" stop-color="#cbd5e1" />
+                            <stop offset="100%" stop-color="#94a3b8" />
                         </linearGradient>
                     </defs>
                 </svg>
@@ -62,13 +66,13 @@
                 <h2>计划开始煮饭时间</h2>
             </div>
             <p class="card-description">滑动选择明天开始煮饭的时间</p>
-            
+
             <div class="time-picker-container">
                 <div class="time-picker-wrapper">
                     <label class="picker-label">小时</label>
+                    <div class="slider-value" id="hourValue">07</div>
                     <div class="slider-container">
                         <input type="range" id="hourSlider" min="0" max="23" value="7" class="time-slider">
-                        <div class="slider-value" id="hourValue">07</div>
                     </div>
                     <div class="slider-marks">
                         <span>0</span>
@@ -78,14 +82,14 @@
                         <span>23</span>
                     </div>
                 </div>
-                
+
                 <div class="time-separator">:</div>
-                
+
                 <div class="time-picker-wrapper">
                     <label class="picker-label">分钟</label>
+                    <div class="slider-value" id="minuteValue">00</div>
                     <div class="slider-container">
                         <input type="range" id="minuteSlider" min="0" max="59" value="0" class="time-slider">
-                        <div class="slider-value" id="minuteValue">00</div>
                     </div>
                     <div class="slider-marks">
                         <span>0</span>
@@ -111,7 +115,7 @@
                 <span class="card-icon">⏰</span>
                 <h2>定时设置</h2>
             </div>
-            
+
             <div class="result-display">
                 <div class="result-label">需要设置的定时时长</div>
                 <div class="result-time">
@@ -165,4 +169,5 @@
 
     <script src="app.js"></script>
 </body>
+
 </html>
